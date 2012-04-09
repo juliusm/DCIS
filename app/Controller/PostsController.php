@@ -102,6 +102,7 @@ class PostsController extends AppController {
 
 
 	//adding comment for git demo purposes only
+	//second time commit
     public function add() {
 
         $results = '';
