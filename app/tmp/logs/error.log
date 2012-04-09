@@ -250,3 +250,17 @@
 #1 /var/www/MDCIS/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
 #2 /var/www/MDCIS/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2012-04-09 05:40:41 Error: [MissingConnectionException] Database connection "SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)" is missing, or could not be created.
+#0 C:\wamp\www\DCIS\lib\Cake\Model\Datasource\DboSource.php(245): Mysql->connect()
+#1 C:\wamp\www\DCIS\lib\Cake\Model\ConnectionManager.php(101): DboSource->__construct(Array)
+#2 C:\wamp\www\DCIS\lib\Cake\Model\Model.php(3372): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\DCIS\lib\Cake\Model\Model.php(1083): Model->setDataSource('default')
+#4 C:\wamp\www\DCIS\lib\Cake\Model\Model.php(3398): Model->setSource('posts')
+#5 C:\wamp\www\DCIS\lib\Cake\Model\Model.php(2653): Model->getDataSource()
+#6 C:\wamp\www\DCIS\app\Controller\PostsController.php(68): Model->find('all', Array)
+#7 [internal function]: PostsController->jsonList()
+#8 C:\wamp\www\DCIS\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#9 C:\wamp\www\DCIS\lib\Cake\Routing\Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\DCIS\lib\Cake\Routing\Dispatcher.php(85): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\DCIS\app\webroot\index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

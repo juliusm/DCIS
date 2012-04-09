@@ -101,6 +101,7 @@ class PostsController extends AppController {
     }
 
 
+	//adding comment for git demo purposes only
     public function add() {
 
         $results = '';
